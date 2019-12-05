@@ -1,7 +1,4 @@
-FROM ruby
+FROM ruby:rc-alpine3.10
 
 RUN gem install terraforming
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["terraforming"]
